@@ -19,7 +19,9 @@ futures-util = "0.3"
 futures-sink = "0.3"
 lazy_static = "1"
 mio-named-pipes = "0.1.6"
-mysql_common = "0.22.0"
+# To support FromRow for tuples up to arity 16
+# PR: https://github.com/blackbeam/rust_mysql_common/pull/33
+mysql_common = { git = "https://github.com/iammxt/rust_mysql_common", rev = "0e4c86952f1e799960e736c0b2bb9d2a6d935bf1"}
 native-tls = "0.2"
 percent-encoding = "2.1.0"
 pin-project = "0.4.6"
